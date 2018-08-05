@@ -37,8 +37,7 @@ class Notif
             if(!self::buildPusher())
                 return false;
         }
-
-        self::$pusher->trigger($args[0], $args[1], $args[2]);
-        // return call_user_func_array([self::$pusher, $name], $args);
+        
+        return call_user_func_array([self::$pusher, $name], $args);
     }
 }
